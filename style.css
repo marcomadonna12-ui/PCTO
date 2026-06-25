@@ -1,0 +1,177 @@
+/* Reset di base e Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7; 
+    color: #1a1a1a; /* Testo molto scuro e ad alto contrasto */
+    background-color: #fdfcfb; /* Sfondo chiarissimo con una punta di calore */
+}
+
+.container {
+    width: 85%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header e Navigazione - PALETTE ARANCIO */
+header {
+    background-color: #d35400; /* Arancione scuro/mattone, elegante e non fastidioso */
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+header h1 {
+    font-size: 26px; /* Testo leggermente più grande */
+    font-weight: 700;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 22px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px; /* Menu più visibile */
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f39c12; /* Arancione ambrato chiaro al passaggio del mouse */
+}
+
+/* Sezioni */
+section {
+    padding: 65px 0;
+}
+
+/* Sfondo sezioni Motivazioni e Competenze (Sfumatura calda chiarissima) */
+.bg-light {
+    background-color: #fcf3ed; 
+}
+
+h2 {
+    margin-bottom: 25px;
+    color: #d35400; /* Titoli coordinati con l'arancione dell'header */
+    border-bottom: 3px solid #f39c12; /* Linea di accento arancione chiaro */
+    display: inline-block;
+    padding-bottom: 6px;
+    font-size: 30px; /* Titoli più grandi e visibili */
+}
+
+p {
+    font-size: 19px; /* Testo dei paragrafi ingrandito per una lettura ottimale */
+}
+
+/* Elenco Competenze */
+ul {
+    padding-left: 20px;
+    font-size: 19px; /* Allineato alla grandezza dei paragrafi */
+}
+
+ul li {
+    margin-bottom: 12px;
+}
+
+/* --- STRUTTURA AFFIANCATA (TESTO + IMMAGINE LATERALE) --- */
+.flex-container {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.flex-text {
+    flex: 1.2; 
+}
+
+.flex-image {
+    flex: 0.8;
+}
+
+/* --- STRUTTURA A GRIGLIA (ATTIVITÀ) --- */
+.grid {
+    display: flex;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.card {
+    flex: 1;
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.07); 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top: 4px solid #d35400; /* Dettaglio arancione in cima alle card */
+}
+
+.card h3 {
+    color: #d35400;
+    margin-bottom: 12px;
+    font-size: 22px; /* Titoli delle card più grandi */
+}
+
+.card p {
+    font-size: 16px; /* Testo interno alle card leggermente più bilanciato */
+    margin-bottom: 20px;
+}
+
+/* --- STILE DELLE IMMAGINI --- */
+.img-responsive {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+}
+
+.card-img {
+    margin-top: auto; 
+    max-height: 170px;
+    object-fit: cover; 
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* Footer */
+footer {
+    background-color: #d35400;
+    color: #fff;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 40px;
+    font-size: 17px; /* Testo del footer più leggibile */
+}
+
+/* --- RESPONSIVE (Per Smartphone) --- */
+@media (max-width: 768px) {
+    .flex-container, .grid {
+        flex-direction: column;
+    }
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
